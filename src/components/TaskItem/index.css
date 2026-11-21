@@ -1,0 +1,70 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.task-item:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.task-details h3 {
+  color: #1e293b;
+  margin: 0 0 8px;
+}
+
+.task-details p {
+  color: #64748b;
+  margin: 5px 0;
+}
+
+.task-details span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #d97706;
+}
+
+.task-item.completed {
+  background-color: #f0fdf4;
+}
+
+.task-item.completed .task-details h3 {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.task-item.completed .task-details span {
+  color: #16a34a;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.task-actions button {
+  padding: 9px 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: #2563eb;
+  cursor: pointer;
+}
+
+.task-actions button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
